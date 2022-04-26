@@ -8,7 +8,8 @@ import RustIcon from "@/assets/icons/langs/rust.svg?component";
 import PythonIcon from "@/assets/icons/langs/python.svg?component";
 import HTMLIcon from "@/assets/icons/langs/html.svg?component";
 import CSSIcon from "@/assets/icons/langs/css.svg?component";
-import SASSIcon from "@/assets/icons/langs/sass.svg?component";
+import SassIcon from "@/assets/icons/langs/sass.svg?component";
+import PhpIcon from "@/assets/icons/langs/php.svg?component";
 
 // name, link, icon
 type Language = [string, string, any];
@@ -20,12 +21,13 @@ const contents: Language[] = [
     ['Java', 'https://www.java.com/', JavaIcon],
     ['Typescript', 'https://www.typescriptlang.org/', TypeScriptIcon],
     ['Javascript', 'https://www.javascript.com/', JavascriptIcon],
+    ['PHP', 'https://php.net/', PhpIcon],
     ['Go', 'https://golang.org/', GoIcon],
     ['Rust', 'https://www.rust-lang.org/', RustIcon],
     ['Python', 'https://www.python.org/', PythonIcon],
     ['HTML', 'https://en.wikipedia.org/wiki/HTML/', HTMLIcon],
     ['CSS', 'https://en.wikipedia.org/wiki/CSS/', CSSIcon],
-    ['SASS', 'https://sass-lang.com/', SASSIcon],
+    ['SASS', 'https://sass-lang.com/', SassIcon],
 ];
 </script>
 <template>
