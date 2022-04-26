@@ -42,7 +42,7 @@ const contents: Language[] = [
             Here's a list of  technologies that I can use comfortably
         </p>
         <div class="techs">
-            <a v-for="item in contents" :href="item[1]" class="tech" :title="item[0]">
+            <a v-for="item in contents" :href="item[1]" class="tech" :title="item[0]" target="_blank">
                 <component :is="item[2]" class="tech__icon"/>
                 <span class="tech__name">{{item[0]}}</span>
             </a>
@@ -68,6 +68,11 @@ const contents: Language[] = [
   flex-flow: column;
   text-align: center;
   text-decoration: none;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.35);
+  }
 
   &__icon {
     width: 42px;

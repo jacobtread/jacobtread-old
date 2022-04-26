@@ -34,6 +34,8 @@ h1, h2, h3, h4, h5, h6, input, button, p, span, a, ul {
   background: $background-dark-op;
   padding: 3rem 2rem;
   margin-bottom: 3rem;
+  opacity: 0;
+  animation: block 0.5s ease forwards 0.5s;
 
   &__title {
     font-size: 2em;
@@ -46,7 +48,17 @@ h1, h2, h3, h4, h5, h6, input, button, p, span, a, ul {
     color: $text-color;
     line-height: 2;
   }
+}
 
+@keyframes block {
+  0% {
+    opacity: 0;
+    transform: translateX(-15%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .icon--inline {

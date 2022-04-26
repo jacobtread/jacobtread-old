@@ -260,6 +260,8 @@ const projects: Project[] = [
   border: 2px solid $background-light;
   text-align: left;
 
+  transition: border-color 0.5s ease, transform 0.25s ease, background-color 0.25s ease;
+
   &__icon {
     display: inline;
     float: left;
@@ -300,6 +302,18 @@ const projects: Project[] = [
         vertical-align: middle;
       }
     }
+  }
+  &:hover {
+    transform: perspective(500px) rotateX(5deg);
+    border-bottom-color: $primary;
+    background: $background-light;
+    .project__tags__item, .project__links__item {
+      background: $background;
+    }
+  }
+
+  &__tags__item, &__links__item {
+    transition: background-color 0.25s ease;
   }
 
   &__tags {
