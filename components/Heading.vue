@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import LinkIcon from "assets/icons/link.svg?component";
+
+interface Properties {
+    link: string,
+    text: string,
+}
+
+const {link, text} = defineProps<Properties>()
+
 const TYPER_VALUES: string[] = [
     'Web', 'Kotlin', 'Stonks™',
     'JS', 'PHP', 'Go', 'Rust', 'Cool',
@@ -8,7 +17,7 @@ const TYPER_VALUES: string[] = [
 </script>
 <template>
     <div class="heading">
-        <img src="public/jacobtread.png" alt="" class="heading__logo">
+        <img src="/jacobtread.png" alt="" class="heading__logo">
         <div class="heading__content">
             <p class="heading__intro">
                 My name is <span class="heading__intro__name">Jacobtread <span class="heading__intro__name__say">(Pronounced Jacob T Read)</span></span>
@@ -25,12 +34,36 @@ const TYPER_VALUES: string[] = [
                     text="when you don't create things, you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create."
                     author="Jonathan Gillette"
             />
+            <NuxtLink :to="link" rel="noopener" class="link">
+                <LinkIcon class="link__icon"/>
+                {{text}}
+            </NuxtLink>
         </div>
     </div>
 </template>
 <style scoped lang="scss">
 @import "assets/scss/variables";
 @import "assets/scss/mixins";
+
+.link {
+  cursor: pointer;
+  background-color: $background-light;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  display: inline-block;
+  margin: 1rem 0 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+  }
+}
 
 .heading {
   display: flex;
@@ -139,5 +172,4 @@ const TYPER_VALUES: string[] = [
     }
   }
 }
-
 </style>

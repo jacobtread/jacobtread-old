@@ -39,12 +39,12 @@ const contents: Language[] = [
     <div class="block">
         <h1 class="block__title">Technologies</h1>
         <p class="block__text">
-            Here's a list of  technologies that I can use comfortably
+            Here's a list of technologies that I can use comfortably
         </p>
         <div class="techs">
-            <a v-for="item in contents" :href="item[1]" class="tech" :title="item[0]" target="_blank">
+            <a v-for="item in contents" :href="item[1]" class="tech" :title="item[0]" target="_blank" rel="noopener">
                 <component :is="item[2]" class="tech__icon"/>
-                <span class="tech__name">{{item[0]}}</span>
+                <span class="tech__name">{{ item[0] }}</span>
             </a>
         </div>
     </div>

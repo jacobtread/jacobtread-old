@@ -14,8 +14,6 @@ import PhpIcon from "@/assets/icons/langs/php.svg?component";
 // name, link, icon
 type Language = [string, string, any];
 
-console.log(import('@/assets/icons/langs/sass.svg?component'))
-
 const contents: Language[] = [
     ['Kotlin', 'https://kotlinlang.org', KotlinIcon],
     ['Java', 'https://www.java.com/', JavaIcon],
@@ -37,9 +35,10 @@ const contents: Language[] = [
             Here's a list of languages that I can write / use comfortably
         </p>
         <div class="languages">
-            <a v-for="item in contents" :href="item[1]" class="language" :title="item[0]" target="_blank">
+            <a v-for="item in contents" :href="item[1]" class="language" :title="item[0]" target="_blank"
+               rel="noopener">
                 <component :is="item[2]" class="language__icon"/>
-                <span class="language__name">{{item[0]}}</span>
+                <span class="language__name">{{ item[0] }}</span>
             </a>
         </div>
     </div>
