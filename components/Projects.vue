@@ -4,6 +4,7 @@ import NZGMIcon from "assets/icons/projects/nzgm.svg?component"
 import PondIcon from "assets/icons/projects/pond.svg?component"
 import KNIIcon from "assets/icons/projects/kni.svg?component"
 import QuizlerIcon from "assets/icons/projects/quizler.svg?component"
+import TrueRandomIcon from "assets/icons/projects/tr.svg?component"
 import GitHubIcon from "@/assets/icons/tech/github.svg?component";
 
 const flatten = (value: string) => value.trim().replaceAll('\n', '')
@@ -107,42 +108,9 @@ const projects: Project[] = [
               nice easy to read view that will cache results from KAMAR. Retreives notices
               from KAMAR API using a PHP backend.
         `),
+        icon: KNIIcon,
         links: [githubLink('jacobtread/KAMAR-Notices')],
         tags: ['PHP', 'HTML', 'CSS', 'Laravel']
-    },
-    {
-        name: "Dream",
-        description: flatten(`
-              Dream is a WEB-GUI Minecraft Cheat that is controlled via your web
-              browser and can be access from any device that can use a web browser
-              its written in VueJS with a PHP backend
-        `),
-        links: [link('https://dreamclient.xyz/')],
-        tags: ['VueJS', 'PHP', 'SASS', 'Typescript', 'Laravel']
-    },
-    {
-        name: "TrueRandom",
-        description: flatten(`
-              A joke website designed for a Hackathon. Centered around a dice rolling machine
-              as a service. For generating random numbers by a physically rolled dice
-        `),
-        links: [
-            githubLink('Questionable-Research-Labs/TrueRandom-MainServer'),
-            link('https://tr.host.qrl.nz/')
-        ],
-        tags: ['TypeScript', 'HTML', 'SASS', 'NodeJS']
-    },
-    {
-        name: 'Alto',
-        description: flatten(`
-              Alto is a high performance Minecraft client written in Kotlin which greatly
-              out performs many clients available today. This project is pending rewrite
-        `),
-        links: [
-            githubLink('AltoClient'),
-            link('https://alto.jacobtread.com/')
-        ],
-        tags: ['Kotlin', 'Java', 'VueJS', 'Minecraft']
     },
     {
         name: 'Quizler',
@@ -158,6 +126,41 @@ const projects: Project[] = [
             link('https://quizler.jacobtread.com/')
         ],
         tags: ['VueJS', 'TypeScript', 'Go', 'Rust']
+    },
+    {
+        name: "TrueRandom",
+        description: flatten(`
+              A joke website designed for a Hackathon. Centered around a dice rolling machine
+              as a service. For generating random numbers by a physically rolled dice
+        `),
+        icon: TrueRandomIcon,
+        links: [
+            githubLink('Questionable-Research-Labs/TrueRandom-MainServer'),
+            link('https://tr.host.qrl.nz/')
+        ],
+        tags: ['TypeScript', 'HTML', 'SASS', 'NodeJS']
+    },
+    {
+        name: "Dream",
+        description: flatten(`
+              Dream is a WEB-GUI Minecraft Cheat that is controlled via your web
+              browser and can be access from any device that can use a web browser
+              its written in VueJS with a PHP backend
+        `),
+        links: [link('https://dreamclient.xyz/')],
+        tags: ['VueJS', 'PHP', 'SASS', 'Typescript', 'Laravel']
+    },
+    {
+        name: 'Alto',
+        description: flatten(`
+              Alto is a high performance Minecraft client written in Kotlin which greatly
+              out performs many clients available today. This project is pending rewrite
+        `),
+        links: [
+            githubLink('AltoClient'),
+            link('https://alto.jacobtread.com/')
+        ],
+        tags: ['Kotlin', 'Java', 'VueJS', 'Minecraft']
     },
     {
         name: 'Hour.ly',
@@ -230,10 +233,13 @@ const projects: Project[] = [
                 <h2 class="project__name">{{ project.name }}</h2>
                 <p class="project__desc">{{ project.description }}</p>
                 <div v-if="project.links" class="project__links">
-                    <a class="project__link" v-for="link in project.links" :href="link.link">
-                        <component v-if="link.icon" :is="link.icon" class="project__link__icon"/>
+                    <a class="project__links__item" v-for="link in project.links" :href="link.link">
+                        <component v-if="link.icon" :is="link.icon" class="project__links__item__icon"/>
                         {{ link.text }}
                     </a>
+                </div>
+                <div v-if="project.tags" class="project__tags">
+                    <span v-for="tag in project.tags" class="project__tags__item">{{ tag }}</span>
                 </div>
             </div>
         </div>
@@ -244,19 +250,69 @@ const projects: Project[] = [
 
 .projects {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
+  gap: 1rem;
 }
 
 .project {
+  color: $text-color;
+  padding: 1rem;
+  border: 2px solid $background-light;
+  text-align: left;
+
   &__icon {
+    display: inline;
+    float: left;
+    margin-right: 1rem;
     height: 32px;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
   }
 
-  &__link {
-    &__icon {
-      width: 1em;
-      height: 1em;
-      vertical-align: middle;
+  &__name {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  &__desc {
+    line-height: 1.5;
+  }
+
+  &__links {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    &__item {
+      padding: 0.5rem;
+      background: $background-light;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      &__icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: stretch;
+
+    &__item {
+      font-size: 0.7em;
+      background: $background-light;
+      padding: 0.5rem;
     }
   }
 }

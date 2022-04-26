@@ -49,6 +49,8 @@ const TYPER_VALUES: string[] = [
 
   &__logo {
     max-height: 300px;
+    max-width: 300px;
+    width: 100%;
     animation: logo 1s ease forwards;
     opacity: 0;
     align-self: center;
@@ -66,7 +68,7 @@ const TYPER_VALUES: string[] = [
   }
 
   &__content {
-    border: 2px solid $primary-dark;
+    border-left: 5px solid $primary-dark;
     background: $background-dark-op;
     padding: 2rem 2rem 1rem;
     opacity: 0;

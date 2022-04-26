@@ -2,6 +2,16 @@
 @import "fonts";
 @import "variables";
 
+
+::-webkit-scrollbar {
+  background: $background-dark;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+}
+
 * {
   margin: 0;
   padding: 0;
