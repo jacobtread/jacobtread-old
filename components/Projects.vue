@@ -5,17 +5,9 @@ import PondIcon from "assets/icons/projects/pond.svg?component"
 import KNIIcon from "assets/icons/projects/kni.svg?component"
 import QuizlerIcon from "assets/icons/projects/quizler.svg?component"
 import GitHubIcon from "@/assets/icons/tech/github.svg?component";
-import VueIcon from "@/assets/icons/tech/vuejs.svg?component";
-import SassIcon from "@/assets/icons/langs/sass.svg?component";
-import TypescriptIcon from "@/assets/icons/langs/typescript.svg?component";
-import JavascriptIcon from "@/assets/icons/langs/js.svg?component";
-import KotlinIcon from "@/assets/icons/langs/kotlin.svg?component";
-import JavaIcon from "@/assets/icons/langs/java.svg?component";
-import PythonIcon from "@/assets/icons/langs/python.svg?component";
-import PhpIcon from "@/assets/icons/langs/php.svg?component";
 
 const flatten = (value: string) => value.trim().replaceAll('\n', '')
-const link = (link: string, text: string = 'View Website'): ProjectLink => ({link, text: 'View Website'})
+const link = (link: string, text: string = 'View Website'): ProjectLink => ({link, text})
 const githubLink = (link: string, text: string = 'Github'): ProjectLink => ({link, text, icon: GitHubIcon,})
 
 interface ProjectLink {
@@ -29,7 +21,7 @@ interface Project {
     description: string,
     links?: ProjectLink[],
     icon?: any,
-    languages?: any[],
+    tags?: string[],
 }
 
 const projects: Project[] = [
@@ -46,7 +38,7 @@ const projects: Project[] = [
             githubLink('jacobtread/QRLS'),
             githubLink('jacobtread/QRLS-v2', 'v2 GitHub')
         ],
-        languages: [VueIcon, SassIcon, TypescriptIcon, JavascriptIcon]
+        tags: ['VueJS', 'SASS', 'TypeScript', 'JavaScript', 'HTML']
     },
     {
         name: 'NZGM',
@@ -62,7 +54,7 @@ const projects: Project[] = [
             link('https://jacobtread.github.io/NZGM/'),
             link('https://grapher.nz', 'NZGrapher'),
         ],
-        languages: [VueIcon, SassIcon, TypescriptIcon]
+        tags: ['VueJS', 'SASS', 'TypeScript']
     },
     {
         name: 'Pond',
@@ -73,7 +65,7 @@ const projects: Project[] = [
         `),
         icon: PondIcon,
         links: [githubLink('jacobtread/Pond')],
-        languages: [KotlinIcon, JavaIcon]
+        tags: ['Kotlin', 'Java', 'Flex (Lexer)']
     },
     {
         name: 'KNI',
@@ -84,7 +76,7 @@ const projects: Project[] = [
         `),
         icon: KNIIcon,
         links: [githubLink('jacobtread/KNI')],
-        languages: [PythonIcon, JavaIcon, PhpIcon]
+        tags: ['Python', 'Java', 'PHP', 'Javascript', 'Kotlin', 'Rust', 'Typescript', '.NET']
     },
     {
         name: 'KJP',
@@ -94,7 +86,8 @@ const projects: Project[] = [
               to use JSON REST API
         `),
         icon: KNIIcon,
-        links: [githubLink('jacobtread/KJP')]
+        links: [githubLink('jacobtread/KJP')],
+        tags: ['Go']
     },
     {
         name: 'KPM',
@@ -104,7 +97,8 @@ const projects: Project[] = [
               and accesses KAMAR through KJP
         `),
         icon: KNIIcon,
-        links: [githubLink('jacobtread/KPM')]
+        links: [githubLink('jacobtread/KPM')],
+        tags: ['VueJS', 'SASS', 'TypeScript']
     },
     {
         name: 'KAMAR-Notices',
@@ -113,7 +107,8 @@ const projects: Project[] = [
               nice easy to read view that will cache results from KAMAR. Retreives notices
               from KAMAR API using a PHP backend.
         `),
-        links: [githubLink('jacobtread/KAMAR-Notices')]
+        links: [githubLink('jacobtread/KAMAR-Notices')],
+        tags: ['PHP', 'HTML', 'CSS', 'Laravel']
     },
     {
         name: "Dream",
@@ -122,7 +117,8 @@ const projects: Project[] = [
               browser and can be access from any device that can use a web browser
               its written in VueJS with a PHP backend
         `),
-        links: [link('https://dreamclient.xyz/')]
+        links: [link('https://dreamclient.xyz/')],
+        tags: ['VueJS', 'PHP', 'SASS', 'Typescript', 'Laravel']
     },
     {
         name: "TrueRandom",
@@ -133,7 +129,8 @@ const projects: Project[] = [
         links: [
             githubLink('Questionable-Research-Labs/TrueRandom-MainServer'),
             link('https://tr.host.qrl.nz/')
-        ]
+        ],
+        tags: ['TypeScript', 'HTML', 'SASS', 'NodeJS']
     },
     {
         name: 'Alto',
@@ -144,7 +141,8 @@ const projects: Project[] = [
         links: [
             githubLink('AltoClient'),
             link('https://alto.jacobtread.com/')
-        ]
+        ],
+        tags: ['Kotlin', 'Java', 'VueJS', 'Minecraft']
     },
     {
         name: 'Quizler',
@@ -158,7 +156,8 @@ const projects: Project[] = [
             githubLink('jacobtread/Quizler'),
             githubLink('jacobtread/Quizler-rust', 'Rust Rewrite'),
             link('https://quizler.jacobtread.com/')
-        ]
+        ],
+        tags: ['VueJS', 'TypeScript', 'Go', 'Rust']
     },
     {
         name: 'Hour.ly',
@@ -167,7 +166,8 @@ const projects: Project[] = [
              worked for. Stores the information in a JSON file and displays a small
              counter in the corner of your screen.
         `),
-        links: [githubLink('jacobtread/Hour.ly'),]
+        links: [githubLink('jacobtread/Hour.ly')],
+        tags: ['JavaScript', 'CSS', 'HTML', 'Electron']
     },
     {
         name: 'Malduino-W Firmware',
@@ -175,7 +175,8 @@ const projects: Project[] = [
              A custom fork of the Malduino Wireless Bad-USB firmware with a more modern
              embedded website which has a nice SPA which uses the Svelte frontend framework
         `),
-        links: [githubLink('jacobtread/MalDuino-W'),]
+        links: [githubLink('jacobtread/MalDuino-W')],
+        tags: ['Svelte', 'C++', 'TypeScript', 'JavaScript', 'SCSS', 'ESP8266']
     },
     {
         name: 'DuckCentral',
@@ -183,7 +184,8 @@ const projects: Project[] = [
              An app for controlling the Malduino Wireless Bad-USB using a Android app with
              a lightweight firmware that removes the embedded website for extra space.
         `),
-        links: [githubLink('jacobtread/DuckCentral'),]
+        links: [githubLink('jacobtread/DuckCentral')],
+        tags: ['Kotlin', 'C++', 'Android', 'Jetpack Compose']
     },
     {
         name: 'TetriVersal',
@@ -193,7 +195,8 @@ const projects: Project[] = [
              of not having a proper client completed the only way to play is through the testing
              client which is a terminal client
         `),
-        links: [githubLink('jacobtread/TetriVersal'),]
+        links: [githubLink('jacobtread/TetriVersal')],
+        tags: ['TypeScript', 'Shell', 'NodeJS']
     },
     {
         name: 'InstaViewer',
@@ -201,19 +204,19 @@ const projects: Project[] = [
              A simple app for viewing the full message contents of Instagram without opening
              actual direct message.
         `),
-        links: [githubLink('jacobtread/InstaViewer'),]
+        links: [githubLink('jacobtread/InstaViewer')],
+        tags: ['Java', 'Android']
     },
     {
-        name: 'Freddys Fast Food',
+        name: 'Freddy\'s Fast Food',
         description: flatten(`
              A python application submitted for an internal assessment in Digital Technologies
              for Achievement Standard 91896. A simple ordering system written in python
         `),
-        links: [githubLink('jacobtread/Freddys-Fast-Food'),]
+        links: [githubLink('jacobtread/Freddys-Fast-Food')],
+        tags: ['Python', 'School']
     }
-]
-
-
+];
 </script>
 <template>
     <div class="block">
