@@ -78,6 +78,7 @@ update();
     content: "";
     position: absolute;
     right: -4px;
+    top: 0;
     width: 2px;
     height: 100%;
     background: currentColor;
