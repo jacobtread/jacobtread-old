@@ -1,0 +1,67 @@
+@use "~@fontsource/roboto/scss/mixins" as Roboto;
+
+@include Roboto.fontFace(
+  $weight: 400,
+  $display: fallback,
+  $fontDir: "~@fontsource/roboto/files"
+);
+
+@include Roboto.fontFace(
+  $weight: 700,
+  $display: fallback,
+  $fontDir: "~@fontsource/roboto/files"
+);
+
+@import "variables.scss";
+@import "reset.scss";
+
+body {
+  background-color: $background;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, input, button, p, span, a, ul {
+  font-family: "Roboto", Roboto, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.icon--inline {
+  height: 1em;
+  vertical-align: middle;
+  margin: 0 0.25em 0 0.5em;
+}
+
+.abstr {
+  width: 100%;
+  color: #603046;
+  z-index: -1;
+}
+
+.block {
+
+  text-align: center;
+
+  &__title {
+    font-size: 2em;
+    color: $title-color;
+  }
+
+  &__text {
+    max-width: 600px;
+    margin: 1em auto;
+    color: $text-color;
+    margin: 1em auto;
+    line-height: 1.7;
+  }
+
+}
