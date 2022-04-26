@@ -30,24 +30,25 @@ const contacts: Contact[] = [
 
 </script>
 <template>
-    <HLeft class="graphic graphic--left"/>
-    <div class="content">
-        <Heading text="Home" link="/"/>
-        <div class="block">
-            <h1 class="block__title">Contacts</h1>
-            <p class="block__text">This page contains all my available contact information</p>
-            <div class="contacts">
-                <a v-for="contact in contacts" class="contact" :href="contact.link || false" target="_blank"
-                   rel="noopener">
-                    <component :is="contact.icon" class="contact__icon"></component>
-                    <div class="contact__content">
-                        <h2 class="contact__name">{{ contact.name }}</h2>
-                        <p class="contact__text">{{ contact.text }}</p>
-                    </div>
-                </a>
+    <div>
+        <HLeft class="graphic graphic--left"/>
+        <div class="content">
+            <Heading text="Home" link="/"/>
+            <div class="block">
+                <h1 class="block__title">Contacts</h1>
+                <p class="block__text">This page contains all my available contact information</p>
+                <div class="contacts">
+                    <a v-for="contact in contacts" class="contact" :href="contact.link || false" target="_blank"
+                       rel="noopener">
+                        <component :is="contact.icon" class="contact__icon"></component>
+                        <div class="contact__content">
+                            <h2 class="contact__name">{{ contact.name }}</h2>
+                            <p class="contact__text">{{ contact.text }}</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-
     </div>
 </template>
 <style scoped lang="scss">

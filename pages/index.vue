@@ -4,14 +4,16 @@ import HLeft from "assets/img/hleft.svg?component";
 import HRight from "assets/img/hright.svg?component";
 </script>
 <template>
-    <HLeft class="graphic graphic--left"/>
-    <HRight class="graphic graphic--right"/>
-    <div class="content">
-        <Heading text="Contact" link="contact"/>
-        <About/>
-        <Languages/>
-        <Technologies/>
-        <Projects/>
+    <div>
+        <HLeft class="graphic graphic--left"/>
+        <HRight class="graphic graphic--right"/>
+        <div class="content">
+            <Heading text="Contact" link="contact"/>
+            <About/>
+            <Languages/>
+            <Technologies/>
+            <Projects/>
+        </div>
     </div>
 </template>
 <style scoped lang="scss">
