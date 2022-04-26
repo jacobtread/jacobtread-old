@@ -33,5 +33,6 @@ export default defineNuxtConfig({
                 { rel: 'manifest', href: '/site.webmanifest', sizes: '16x16' },
             ],
         }
-    }
+    },
+
 })
