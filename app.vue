@@ -8,13 +8,21 @@ import HRight from "assets/img/hright.svg?component";
 <template>
     <HLeft class="graphic graphic--left"/>
     <HRight class="graphic graphic--right"/>
-    <Heading/>
-    <About/>
-    <Languages/>
+    <div class="content">
+        <Heading/>
+        <About/>
+        <Languages/>
+        <Technologies/>
+    </div>
 </template>
 <style lang="scss" scoped>
 @import "assets/scss/variables";
 @import "assets/scss/mixins";
+
+.content {
+  max-width: 1000px;
+  margin: 1rem auto;
+}
 
 .graphic {
   position: absolute;

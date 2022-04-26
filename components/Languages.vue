@@ -1,27 +1,23 @@
 <script setup lang="ts">
-import TypeScriptIcon from "@/assets/icons/typescript.svg?component";
-import JavascriptIcon from "@/assets/icons/js.svg?component";
-import VueJSIcon from "@/assets/icons/vuejs.svg?component";
-import KotlinIcon from "@/assets/icons/kotlin.svg?component";
-import JavaIcon from "@/assets/icons/java.svg?component";
-import GoIcon from "@/assets/icons/go.svg?component";
-import RustIcon from "@/assets/icons/rust.svg?component";
-import PythonIcon from "@/assets/icons/python.svg?component";
-import IntellijIcon from "@/assets/icons/idea.svg?component";
-import HTMLIcon from "@/assets/icons/html.svg?component";
-import CSSIcon from "@/assets/icons/css.svg?component";
-import SASSIcon from "@/assets/icons/sass.svg?component";
-import LaravelIcon from "@/assets/icons/laravel.svg?component";
-import MySQLIcon from "@/assets/icons/mysql.svg?component";
-import MongoDBIcon from "@/assets/icons/mongodb.svg?component";
+import TypeScriptIcon from "@/assets/icons/langs/typescript.svg?component";
+import JavascriptIcon from "@/assets/icons/langs/js.svg?component";
+import KotlinIcon from "@/assets/icons/langs/kotlin.svg?component";
+import JavaIcon from "@/assets/icons/langs/java.svg?component";
+import GoIcon from "@/assets/icons/langs/go.svg?component";
+import RustIcon from "@/assets/icons/langs/rust.svg?component";
+import PythonIcon from "@/assets/icons/langs/python.svg?component";
+import HTMLIcon from "@/assets/icons/langs/html.svg?component";
+import CSSIcon from "@/assets/icons/langs/css.svg?component";
+import SASSIcon from "@/assets/icons/langs/sass.svg?component";
 
 // name, link, icon
 type Language = [string, string, any];
 
+console.log(import('@/assets/icons/langs/sass.svg?component'))
+
 const contents: Language[] = [
     ['Kotlin', 'https://kotlinlang.org', KotlinIcon],
     ['Java', 'https://www.java.com/', JavaIcon],
-    ['VueJS', 'https://vuejs.org/', VueJSIcon],
     ['Typescript', 'https://www.typescriptlang.org/', TypeScriptIcon],
     ['Javascript', 'https://www.javascript.com/', JavascriptIcon],
     ['Go', 'https://golang.org/', GoIcon],
@@ -30,22 +26,18 @@ const contents: Language[] = [
     ['HTML', 'https://en.wikipedia.org/wiki/HTML/', HTMLIcon],
     ['CSS', 'https://en.wikipedia.org/wiki/CSS/', CSSIcon],
     ['SASS', 'https://sass-lang.com/', SASSIcon],
-    ['Laravel', 'https://laravel.com/', LaravelIcon],
-    ['MySQL', 'https://www.mysql.com/', MySQLIcon],
-    ['MongoDB', 'https://www.mongodb.com/', MongoDBIcon],
-    ['Intellij IDEA', 'https://www.jetbrains.com/', IntellijIcon],
 ];
 </script>
 <template>
     <div class="block">
-        <h1 class="block__title">Languages & Technologies</h1>
+        <h1 class="block__title">Languages </h1>
         <p class="block__text">
-            Here's a list of languages / technologies that I can write / use comfortably
+            Here's a list of languages that I can write / use comfortably
         </p>
         <div class="languages">
-            <a v-for="item in contents" :href="item[1]" class="language">
+            <a v-for="item in contents" :href="item[1]" class="language" :title="item[0]">
                 <component :is="item[2]" class="language__icon"/>
-                <span class="language__name">{{ item[0] }}</span>
+                <span class="language__name">{{item[0]}}</span>
             </a>
         </div>
     </div>
@@ -56,31 +48,23 @@ const contents: Language[] = [
 .languages {
   display: flex;
   flex-flow: row wrap;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
+  justify-items: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .language {
   align-items: center;
-  padding: 1rem;
   display: flex;
   flex-flow: column;
-  align-items: center;
   text-align: center;
-  background: $background-light;
-
-  max-width: 100px;
-  max-height: 200px;
-  width: 100%;
-
-  flex: auto;
-
+  text-decoration: none;
 
   &__icon {
-    height: 52px;
-    width: 100%;
-    max-width: 52px;
+    width: 42px;
+    height: 42px;
     color: #f58f1e;
   }
 
@@ -88,7 +72,7 @@ const contents: Language[] = [
     margin-top: 1rem;
     color: $text-color;
     font-weight: bold;
+    font-size: 0.6rem;
   }
-
 }
 </style>

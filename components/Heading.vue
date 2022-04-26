@@ -8,24 +8,23 @@ const TYPER_VALUES: string[] = [
 </script>
 <template>
     <div class="heading">
-        <div class="heading__wrapped">
-            <img src="public/img/jacobtread.png" alt="" class="heading__logo">
-            <div class="heading__content">
-                <p class="heading__intro">
-                    My name is <span class="heading__intro__name">Jacobtread <span class="heading__intro__name__say">(Pronounced Jacob T Read)</span></span> and im a
-                    <span class="heading__role">
-                       <ClientOnly>
-                    <Typer class="typer" :values="TYPER_VALUES" :duration="2000"/>
-                </ClientOnly>
-                <span class="heading__role__suffix">Developer</span>
+        <img src="public/img/jacobtread.png" alt="" class="heading__logo">
+        <div class="heading__content">
+            <p class="heading__intro">
+                My name is <span class="heading__intro__name">Jacobtread <span class="heading__intro__name__say">(Pronounced Jacob T Read)</span></span>
+                and im a
+                <span class="heading__role">
+                    <ClientOnly>
+                        <Typer class="typer" :values="TYPER_VALUES" :duration="2000"/>
+                    </ClientOnly>
+                    <span class="heading__role__suffix">Developer</span>
                 </span>
-                </p>
-                <Quote
-                        class="quote"
-                        text="when you don't create things, you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create."
-                        author="Jonathan Gillette"
-                />
-            </div>
+            </p>
+            <Quote
+                    class="quote"
+                    text="when you don't create things, you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create."
+                    author="Jonathan Gillette"
+            />
         </div>
     </div>
 </template>
@@ -35,39 +34,34 @@ const TYPER_VALUES: string[] = [
 
 .heading {
   display: flex;
-  align-items: center;
+  flex-flow: row;
   justify-content: center;
+  gap: 2rem;
+  align-items: stretch;
+  margin: 3rem 0;
 
 
-  &__wrapped {
-    position: relative;
-    display: flex;
-    flex-flow: row;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-
-    @include max-width(900px) {
-      flex-flow: column;
-      gap: 4rem;
-    }
-
+  @include max-width(900px) {
+    flex-flow: column;
+    gap: 4rem;
   }
+
 
   &__logo {
     max-height: 300px;
     animation: logo 1s ease forwards;
     opacity: 0;
+    align-self: center;
   }
 
   @keyframes logo {
     0% {
       opacity: 0;
-      transform: scale(0) ;
+      transform: scale(0);
     }
     100% {
       opacity: 1;
-      transform: scale(1) ;
+      transform: scale(1);
     }
   }
 
@@ -113,7 +107,7 @@ const TYPER_VALUES: string[] = [
       }
     }
 
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 640px) {
       .heading__intro__name__say {
         display: none;
       }
