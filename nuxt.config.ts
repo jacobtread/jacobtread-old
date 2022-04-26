@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt'
+import svgLoader from "vite-svg-loader";
 
 const description: string = `
 "I am a small time developer from 🥝 New Zealand with a lot of free time on my hands. 
@@ -36,5 +37,12 @@ export default defineNuxtConfig({
     },
     css: [
         '@/assets/scss/global.scss'
-    ]
+    ],
+    vite: {
+        plugins: [
+            svgLoader({
+                defaultImport: 'component'
+            })
+        ]
+    }
 })

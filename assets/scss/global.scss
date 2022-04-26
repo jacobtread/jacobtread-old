@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6, input, button, p, span, a, ul {
 .block {
 
   text-align: center;
+  background: $background-dark-op;
+  max-width: 800px;
+  padding: 3rem 2rem;
+  margin: 1rem auto 5rem;
 
   &__title {
     font-size: 2em;
@@ -34,4 +38,10 @@ h1, h2, h3, h4, h5, h6, input, button, p, span, a, ul {
     line-height: 1.7;
   }
 
+}
+
+.icon--inline {
+  height: 1em;
+  width: auto;
+  vertical-align: middle;
 }
