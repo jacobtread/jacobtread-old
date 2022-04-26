@@ -49,7 +49,7 @@ const contents: Language[] = [
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   justify-items: center;
   gap: 1rem;
   margin-top: 1rem;

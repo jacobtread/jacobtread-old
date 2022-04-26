@@ -7,7 +7,7 @@ I spent my days developing web applications mostly 🕹️ Dashboards and simila
 But I do accasionally dip my feet into the world desktop applications with Kotlin and Java.
 I have also recently been dipping my feet into the Rust programming language.
 But I do perfer to use Web techologies such as Typescript and VueJS
-`.replaceAll('\n', ''); // Removing newlines from multiline string
+`.trim().replaceAll('\n', ''); // Removing newlines from multiline string
 
 export default defineNuxtConfig({
     app: {

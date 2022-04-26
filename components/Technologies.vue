@@ -13,6 +13,7 @@ import GitHubIcon from "@/assets/icons/tech/github.svg?component";
 import GitKrakenIcon from "@/assets/icons/tech/gitkraken.svg?component";
 import NestJSIcon from "@/assets/icons/tech/nestjs.svg?component";
 import NuxtJSIcon from "@/assets/icons/tech/nuxtjs.svg?component";
+import DockerIcon from "@/assets/icons/tech/docker.svg?component";
 
 // name, link, icon
 type Language = [string, string, any];
@@ -26,6 +27,7 @@ const contents: Language[] = [
     ['MongoDB', 'https://www.mongodb.com/', MongoDBIcon],
     ['GitHub', 'https://github.com/jacobtread', GitHubIcon],
     ['GitKraken', 'https://www.gitkraken.com/', GitKrakenIcon],
+    ['Docker', 'https://www.docker.com/', DockerIcon],
     ['Intellij IDEA', 'https://www.jetbrains.com/idea/', IntellijIcon],
     ['PhpStorm', 'https://www.jetbrains.com/phpstorm/', PhpStormIcon],
     ['WebStorm', 'https://www.jetbrains.com/webstorm/', WebStormIcon],
@@ -54,7 +56,7 @@ const contents: Language[] = [
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   justify-items: center;
   gap: 1rem;
   margin-top: 1rem;

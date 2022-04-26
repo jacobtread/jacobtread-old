@@ -8,7 +8,7 @@ const TYPER_VALUES: string[] = [
 </script>
 <template>
     <div class="heading">
-        <img src="public/img/jacobtread.png" alt="" class="heading__logo">
+        <img src="public/jacobtread.png" alt="" class="heading__logo">
         <div class="heading__content">
             <p class="heading__intro">
                 My name is <span class="heading__intro__name">Jacobtread <span class="heading__intro__name__say">(Pronounced Jacob T Read)</span></span>
