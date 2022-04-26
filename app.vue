@@ -13,6 +13,7 @@ import HRight from "assets/img/hright.svg?component";
         <About/>
         <Languages/>
         <Technologies/>
+        <Projects/>
     </div>
 </template>
 <style lang="scss" scoped>
