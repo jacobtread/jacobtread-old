@@ -10,6 +10,8 @@ But I do perfer to use Web techologies such as Typescript and VueJS
 `.trim().replaceAll('\n', ''); // Removing newlines from multiline string
 
 export default defineNuxtConfig({
+    target: 'static',
+    ssr: false,
     app: {
         head: {
             meta: [
