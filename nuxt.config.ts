@@ -1,17 +1,11 @@
 import { defineNuxtConfig } from 'nuxt'
 import svgLoader from "vite-svg-loader";
 
-const description: string = `
-"I am a small time developer from 🥝 New Zealand with a lot of free time on my hands. 
-I spent my days developing web applications mostly 🕹️ Dashboards and similar applications. 
-But I do accasionally dip my feet into the world desktop applications with Kotlin and Java.
-I have also recently been dipping my feet into the Rust programming language.
-But I do perfer to use Web techologies such as Typescript and VueJS
-`.trim().replaceAll('\n', ''); // Removing newlines from multiline string
+const description: string = 'I am a small time developer from 🥝 New Zealand with a lot of free time on my hands. I spent my days developing web applications mostly 🕹️ Dashboards and similar applications. But I do occasionally dip my feet into the world desktop applications with Kotlin and Java. I have also recently been dipping my feet into the Rust programming language. But I do prefer to use Web technologies such as Typescript and VueJS';
 
 export default defineNuxtConfig({
     target: 'static',
-    ssr: false,
+    ssr: true,
     app: {
         head: {
             meta: [
