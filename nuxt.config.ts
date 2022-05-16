@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     ssr: true,
     app: {
         head: {
+            title: 'Jacobtread | Web Developer',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
