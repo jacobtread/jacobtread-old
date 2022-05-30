@@ -8,7 +8,7 @@ import TrueRandomIcon from "assets/icons/projects/tr.svg?component"
 import GitHubIcon from "@/assets/icons/tech/github.svg?component";
 
 const link = (link: string, text: string = 'View Website'): ProjectLink => ({link, text})
-const githubLink = (link: string, text: string = 'Github'): ProjectLink => ({link, text, icon: GitHubIcon,})
+const githubLink = (link: string, text: string = 'Github'): ProjectLink => ({link: 'https://github.com/' + link, text, icon: GitHubIcon,})
 
 interface ProjectLink {
     text: string,
