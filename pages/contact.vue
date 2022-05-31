@@ -25,7 +25,7 @@ const contacts: Contact[] = [
     },
     {icon: GitHubIcon, name: 'GitHub', text: 'jacobtread', link: 'https://github.com/jacobtread'},
     {icon: DiscordIcon, name: 'Discord', text: 'Jacobtread#3770'},
-    {icon: MailIcon, name: 'Instagram', text: 'Jacobtread', link: 'mailto:jacobtread@gmail.com'},
+    {icon: MailIcon, name: 'Email', text: 'jacobtread@gmail.com', link: 'mailto:jacobtread@gmail.com'},
 ]
 
 </script>
@@ -38,7 +38,7 @@ const contacts: Contact[] = [
                 <h1 class="block__title">Contacts</h1>
                 <p class="block__text">This page contains all my available contact information</p>
                 <div class="contacts">
-                    <a v-for="contact in contacts" class="contact" :href="contact.link || false" target="_blank"
+                    <a v-for="contact in contacts" class="contact" :href="contact.link || '#'" target="_blank"
                        rel="noopener">
                         <component :is="contact.icon" class="contact__icon"></component>
                         <div class="contact__content">
