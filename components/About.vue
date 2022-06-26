@@ -46,14 +46,14 @@
                 </div>
             </div>
             <div class="button-group">
-                <NuxtLink class="button" to="/">
+                <NuxtLink class="button" to="projects">
                     <LinkIcon class="button__icon"/>
                     <span class="button__text">View Projects</span>
                 </NuxtLink>
-                <NuxtLink class="button" to="/">
+                <a class="button" href="https://github.com/jacobtread" rel="noopener" target="_blank">
                     <GithubIcon class="button__icon"/>
-                    <span class="button__text">View Projects</span>
-                </NuxtLink>
+                    <span class="button__text">View Github</span>
+                </a>
             </div>
         </div>
     </div>

@@ -21,34 +21,34 @@ import DiscordIcon from "assets/icons/socials/discord.svg?component"
 
             </div>
             <div class="button-group">
-                <a class="button" href="https://instagram.com/jacobtread" rel="noopener">
+                <a class="button" href="https://instagram.com/jacobtread" rel="noopener" target="_blank">
                     <InstagramIcon class="button__icon"/>
                     <span class="button__content">
                         <span class="button__text">Instagram</span>
                         <span class="button__subtext">instagram.com/jacobtread</span>
                     </span>
                 </a>
-                <a class="button" href="https://github.com/jacobtread" rel="noopener">
+                <a class="button" href="https://github.com/jacobtread" rel="noopener" target="_blank">
                     <GithubIcon class="button__icon"/>
                     <span class="button__content">
                         <span class="button__text">Github</span>
                         <span class="button__subtext">github.com/jacobtread</span>
                     </span>
                 </a>
-                <a class="button" href="mailto:jacobtread@gmail.com" rel="noopener">
+                <a class="button" href="mailto:jacobtread@gmail.com" rel="noopener" target="_blank">
                     <EmailIcon class="button__icon"/>
                     <span class="button__content">
                         <span class="button__text">Email</span>
                         <span class="button__subtext">jacobtread@gmail.com</span>
                     </span>
                 </a>
-                <button class="button" rel="noopener">
+                <div class="button">
                     <DiscordIcon class="button__icon"/>
                     <span class="button__content">
                         <span class="button__text">Discord</span>
                         <span class="button__subtext">Jacobtread#3770</span>
                     </span>
-                </button>
+                </div>
             </div>
         </div>
     </div>
