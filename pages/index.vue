@@ -5,6 +5,7 @@
             <About/>
             <Contact/>
             <Tech/>
+            <Footer/>
         </main>
     </div>
 </template>
