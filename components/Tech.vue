@@ -1,10 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+</script>
 <template>
     <div class="content--background">
         <div class="content" id="tech">
             <div class="content__split">
                 <div class="content__split__img">
-                    <img src="assets/img/backend.png" alt="Backend Languages">
+                    <img src="/img/langb.png" alt="Backend Languages">
                 </div>
                 <div class="content__split__body">
                     <h1 class="content__title">Backend Languages</h1>
@@ -21,7 +23,7 @@
             </div>
             <div class="content__split">
                 <div class="content__split__img">
-                    <img src="assets/img/frontend.png" alt="Frontend Languages">
+                    <img src="/img/langf.png" alt="Frontend Languages">
                 </div>
                 <div class="content__split__body">
                     <h1 class="content__title">Frontend Languages</h1>
@@ -38,7 +40,7 @@
             </div>
             <div class="content__split">
                 <div class="content__split__img">
-                    <img src="assets/img/ides.png" alt="IDE & Editors">
+                    <img src="/img/editors.png" alt="IDE & Editors">
                 </div>
                 <div class="content__split__body">
                     <h1 class="content__title">IDE & Editors</h1>
@@ -55,7 +57,7 @@
             </div>
             <div class="content__split">
                 <div class="content__split__img">
-                    <img src="assets/img/backend_frameworks.png" alt="Backend Frameworks & Tooling">
+                    <img src="/img/framb.png" alt="Backend Frameworks & Tooling">
                 </div>
                 <div class="content__split__body">
                     <h1 class="content__title">Backend Frameworks & Tooling</h1>
@@ -71,7 +73,7 @@
             </div>
             <div class="content__split">
                 <div class="content__split__img">
-                    <img src="assets/img/frontend_frameworks.png" alt="Frontend Frameworks & Tooling">
+                    <img src="/img/framf.png" alt="Frontend Frameworks & Tooling">
                 </div>
                 <div class="content__split__body">
                     <h1 class="content__title">Frontend Frameworks & Tooling</h1>

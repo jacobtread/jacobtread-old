@@ -17,7 +17,7 @@ const TYPER_VALUES: string[] = [
     <div class="heading">
         <h1 class="heading__corner">JR</h1>
         <div class="heading__content">
-            <img class="heading__content__img" src="assets/img/banner.png" alt="Banner Image"/>
+            <img class="heading__content__img" src="/img/banner.png" alt="Banner Image"/>
             <h1 class="heading__content__title">Jacob Read</h1>
             <p class="heading__content__text">
                 I am a
