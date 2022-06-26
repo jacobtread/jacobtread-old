@@ -5,15 +5,10 @@ import HRight from "assets/img/hright.svg?component";
 </script>
 <template>
     <div>
-        <HLeft class="graphic graphic--left"/>
-        <HRight class="graphic graphic--right"/>
-        <div class="content">
-            <Heading text="Contact" link="contact"/>
+        <Heading text="Contact" link="contact"/>
+        <main class="main">
             <About/>
-            <Languages/>
-            <Technologies/>
-            <Projects/>
-        </div>
+        </main>
     </div>
 </template>
 <style scoped lang="scss">
