@@ -4,6 +4,7 @@
         <main class="main">
             <About/>
             <Contact/>
+            <Tech/>
         </main>
     </div>
 </template>

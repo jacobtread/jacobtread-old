@@ -22,6 +22,11 @@ body {
   background-color: $background;
 }
 
+/*
+*  Apply the font-family and relevant font styles to
+*  elements that will contain text
+*  (rather than applying it to everything)
+*/
 h1, h2, h3, h4, h5, h6, input, button, p, span, a, ul {
   font-family: $font-family;
   -webkit-font-smoothing: antialiased;
@@ -117,4 +122,8 @@ button.button {
 
     }
   }
+}
+
+p {
+  line-height: 1.5;
 }
