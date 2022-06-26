@@ -6,8 +6,8 @@
 </script>
 <template>
     <div class="content--background">
-        <div class="content">
-            <h1 class="content__title">Getting to know me</h1>
+        <div class="content" id="about">
+            <a class="content__title" href="#about">Getting to know me</a>
             <div class="content__body">
                 <div class="content__body__item">
                     <h2 class="content__body__item__title">

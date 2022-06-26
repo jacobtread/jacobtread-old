@@ -7,8 +7,8 @@ import DiscordIcon from "assets/icons/socials/discord.svg?component"
 </script>
 <template>
     <div class="content--background">
-        <div class="content">
-            <h1 class="content__title">Contacting me</h1>
+        <div class="content" id="contact">
+            <a class="content__title" href="#contact">Contacting me</a>
             <div class="content__body">
                 <div class="content__body__item">
                     <p class="content__body__item__text">

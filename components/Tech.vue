@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
     <div class="content--background">
-        <div class="content">
+        <div class="content" id="tech">
             <div class="content__split">
                 <div class="content__split__img">
                     <img src="assets/img/backend.png" alt="Backend Languages">

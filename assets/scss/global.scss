@@ -93,11 +93,12 @@ button.button {
   }
 
   &__title {
+    text-decoration: none;
     padding: 1rem;
     background: $background;
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: $title;
     border-radius: 8px;
   }
 
