@@ -34,14 +34,21 @@ h1, h2, h3, h4, h5, h6, input, button, p, span, a, ul {
   gap: 1.5rem;
 }
 
+button.button {
+  border: none;
+}
+
 .button {
+  text-align: left;
+  text-decoration: none;
   display: flex;
   flex-flow: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   background: $first-button-background;
   border-radius: 8px;
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  padding: 0.75rem 1rem 0.75rem 0.75rem;
+  font-size: 1rem;
 
   &__icon {
     width: 32px;
@@ -59,12 +66,14 @@ h1, h2, h3, h4, h5, h6, input, button, p, span, a, ul {
 
 .content {
 
+  border-radius: 5px;
+
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 
   // Apply margin of 2rem for vertical and align center with side margins
-  margin: 2rem auto;
+  margin: 0 auto;
 
   // Use all available width but don't go larger than 900px
   width: 100%;
@@ -74,6 +83,7 @@ h1, h2, h3, h4, h5, h6, input, button, p, span, a, ul {
   padding: 2rem;
 
   &--background {
+    padding: 2rem;
     background: linear-gradient($background, $background);
   }
 
