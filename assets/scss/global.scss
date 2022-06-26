@@ -28,3 +28,83 @@ h1, h2, h3, h4, h5, h6, input, button, p, span, a, ul {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.button-group {
+  display: flex;
+  flex-flow: row;
+  gap: 1.5rem;
+}
+
+.button {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 0.5rem;
+  background: $first-button-background;
+  border-radius: 8px;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+
+  &__icon {
+    width: 32px;
+    height: auto;
+  }
+
+  &__text {
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+}
+
+.content {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  // Apply margin of 2rem for vertical and align center with side margins
+  margin: 2rem auto;
+
+  // Use all available width but don't go larger than 900px
+  width: 100%;
+  max-width: 900px;
+
+  background: linear-gradient($background, $background);
+  padding: 2rem;
+
+  &--background {
+    background: linear-gradient($background, $background);
+  }
+
+  &__title {
+    padding: 1rem;
+    background: $background;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+
+    &__item {
+
+      &__title {
+        color: $title;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      &__text {
+        color: $text;
+        line-height: 1.5;
+        font-size: 1.2rem;
+      }
+
+    }
+  }
+}
