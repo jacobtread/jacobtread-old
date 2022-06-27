@@ -214,7 +214,6 @@ import TrueRandomIcon from "assets/icons/projects/tr.svg?component"</script>
             $third-block-tint-top, $third-block-tint-bottom,
     );
 
-
     &--background {
         background: linear-gradient(
                 $first-gradient-top, $first-gradient-bottom,

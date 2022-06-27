@@ -15,9 +15,7 @@ const TYPER_VALUES: string[] = [
 </script>
 <template>
     <div class="heading">
-        <h1 class="heading__corner">JR</h1>
         <div class="heading__content">
-            <img class="heading__content__img" src="/img/banner.png" alt="Banner Image"/>
             <h1 class="heading__content__title">Jacob Read</h1>
             <p class="heading__content__text">
                 I am a
@@ -35,14 +33,14 @@ const TYPER_VALUES: string[] = [
 /* Heading element */
 .heading {
     margin: 0;
-    padding: 0;
     display: flex;
     width: 100%; // Heading must span the entire available width
-    height: 100vh; // Heading must take up the entire viewport
 
     flex-flow: column;
     justify-content: center;
     align-items: center;
+
+    padding: 4rem 0;
 
     /* Background image of code with linear-gradient in-front of it*/
     background: linear-gradient($heading-gradient-start, $heading-gradient-end) no-repeat center,
