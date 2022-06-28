@@ -18,7 +18,6 @@ const TYPER_VALUES: string[] = [
     </div>
 </template>
 <style scoped lang="scss">
-@import "assets/scss/variables";
 @import "assets/scss/mixins";
 @import "assets/scss/colors";
 
@@ -47,7 +46,6 @@ const TYPER_VALUES: string[] = [
         color: white;
         font-weight: bold;
     }
-
 
     &__content {
         text-align: center;

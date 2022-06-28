@@ -7,7 +7,6 @@
     </div>
 </template>
 <style scoped lang="scss">
-@import "assets/scss/variables";
 @import "assets/scss/mixins";
 @import "assets/scss/colors";
 

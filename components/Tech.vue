@@ -92,7 +92,7 @@
 </template>
 <style scoped lang="scss">
 @import "assets/scss/colors";
-
+@import "assets/scss/mixins";
 
 .content {
   gap: 3rem;
@@ -101,10 +101,14 @@
     display: flex;
     flex-flow: row;
     gap: 2rem;
-    align-items: stretch;
+    align-items: center;
 
     &:nth-child(even) {
       flex-flow: row-reverse;
+
+      @include max-width(854px) {
+        flex-flow: column;
+      }
     }
 
     &__img {
@@ -112,7 +116,9 @@
 
       > img {
         height: 100%;
+        max-height: 100px;
       }
+
     }
 
     &__body {
@@ -120,6 +126,10 @@
       display: flex;
       flex-flow: column;
       gap: 1.5rem;
+    }
+
+    @include max-width(854px) {
+        flex-flow: column;
     }
   }
 
