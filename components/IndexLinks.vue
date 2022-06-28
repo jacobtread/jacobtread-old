@@ -25,12 +25,25 @@ import LinkIcon from "assets/icons/link.svg?component"
 </template>
 <style scoped lang="scss">
 @import "assets/scss/colors";
+@import "assets/scss/mixins";
 
 .heading-group__wrapper {
   display: flex;
   flex-flow: row;
   justify-content: center;
   margin: 0 auto;
+
+  @include max-width(714px) {
+    display: block;
+    width: calc(100% - 4rem);
+    padding: 0 2rem;
+
+    .heading-group {
+      flex-flow: column;
+      background: linear-gradient($first-block-tint-top, $first-block-tint-bottom, $second-block-tint-top, $second-block-tint-bottom, $third-block-tint-top, $third-block-tint-bottom);
+      align-items: stretch;
+    }
+  }
 }
 
 .button {
