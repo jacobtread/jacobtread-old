@@ -1,12 +1,4 @@
 <script setup lang="ts">
-
-interface Properties {
-    link: string,
-    text: string,
-}
-
-const { link, text } = defineProps<Properties>()
-
 const TYPER_VALUES: string[] = [
     'Full-Stack', 'Web', 'Kotlin', 'Front-end',
     'Back-end', 'Stonks™', 'JS', 'PHP', 'Go', 'Rust',

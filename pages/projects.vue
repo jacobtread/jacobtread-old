@@ -5,7 +5,7 @@ import ProjectsList from "~/components/ProjectsList.vue"
 </script>
 <template>
     <div>
-        <HeadingProjects text="Contact" link="contact"/>
+        <HeadingProjects/>
         <main class="main">
             <div class="content">
                 <div class="button-group">

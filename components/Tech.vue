@@ -118,8 +118,11 @@
     }
 
     &__img {
-      height: 100%;
       flex: auto;
+
+      > img {
+        height: 100%;
+      }
     }
 
     &__body {

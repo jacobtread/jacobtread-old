@@ -1,22 +1,9 @@
 <script setup lang="ts">
 
-interface Properties {
-    link: string,
-    text: string,
-}
-
-const { link, text } = defineProps<Properties>()
-
-const TYPER_VALUES: string[] = [
-    'Full-Stack', 'Web', 'Kotlin', 'Front-end',
-    'Back-end', 'Stonks™', 'JS', 'PHP', 'Go', 'Rust',
-    'Cool', 'Bad', 'Cheat', 'HTML', 'CSS', '!Good',
-]
 </script>
 <template>
     <div class="heading">
         <h1 class="heading__corner">JR <span class="heading__corner__sub">My Projects</span></h1>
-
     </div>
 </template>
 <style scoped lang="scss">
