@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
-    import LinkIcon from "assets/icons/link.svg?component"
-    import GithubIcon from "assets/icons/tech/github.svg?component"
+import LinkIcon from "assets/icons/link.svg?component"
+import GithubIcon from "assets/icons/tech/github.svg?component"
 
 </script>
 <template>
@@ -27,9 +27,12 @@
                         My Interests
                     </h2>
                     <p class="content__body__item__text">
-                        I am very interested in learning programming related subjects as I have spent almost of all my education career
-                        following the programming pathways. I quite enjoy working with other peoples code through reverse engineering and
-                        other collaboration. Outside of programming I am also interested in body building and I like to keep a strict routine
+                        I am very interested in learning programming related subjects as I have spent almost of all my
+                        education career
+                        following the programming pathways. I quite enjoy working with other peoples code through
+                        reverse engineering and
+                        other collaboration. Outside of programming I am also interested in body building and I like to
+                        keep a strict routine
                         with my exercise.
                     </p>
                 </div>
@@ -39,8 +42,10 @@
                         Projects
                     </h2>
                     <p class="content__body__item__text">
-                        I’ve worked on many projects throughout the years many of which are readily available on my Github the projects listed on
-                        my github are majority under the MIT license. My projects come in all kinds of varieties in all different kinds of langauges
+                        I’ve worked on many projects throughout the years many of which are readily available on my
+                        Github the projects listed on
+                        my github are majority under the MIT license. My projects come in all kinds of varieties in all
+                        different kinds of langauges
                         and frameworks. Feel free to take a look around and see if any of them spark your interests
                     </p>
                 </div>
@@ -60,30 +65,42 @@
 </template>
 <style scoped lang="scss">
 @import "assets/scss/colors";
+@import "assets/scss/mixins";
 
+.button-group {
+  flex-wrap: wrap;
+  justify-items: stretch;
+
+
+  .button {
+    @include max-width(524px) {
+      width: 100%;
+    }
+  }
+}
 
 .content {
-    background: linear-gradient($first-block-tint-top, $first-block-tint-bottom);
+  background: linear-gradient($first-block-tint-top, $first-block-tint-bottom);
 
 
-    &--background {
-        background: linear-gradient($first-gradient-top, $first-gradient-bottom);
+  &--background {
+    background: linear-gradient($first-gradient-top, $first-gradient-bottom);
+  }
+
+  &__title {
+    background: $first-block-title-bg;
+  }
+
+  &__body {
+
+    &__item__title__prefix {
+      color: $first-block-subtitle-hash;
     }
-
-    &__title {
-        background: $first-block-title-bg;
-    }
-
-    &__body {
-
-        &__item__title__prefix {
-            color: $first-block-subtitle-hash;
-        }
-    }
+  }
 }
 
 .button {
-    background: $first-button-background;
+  background: $first-button-background;
 }
 
 </style>

@@ -119,6 +119,11 @@
         max-height: 100px;
       }
 
+      @include max-width(500px) {
+        flex-flow: column;
+        width: 100%;
+        max-width: 320px;
+      }
     }
 
     &__body {
