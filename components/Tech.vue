@@ -5,9 +5,7 @@
     <div class="content--background">
         <div class="content" id="tech">
             <div class="content__split">
-                <div class="content__split__img">
-                    <img src="/img/langb.png" alt="Backend Languages">
-                </div>
+                <img class="content__split__img" src="/img/langb.png" alt="Backend Languages">
                 <div class="content__split__body">
                     <h1 class="content__title">Backend Languages</h1>
                     <div class="content__body">
@@ -24,9 +22,7 @@
                 </div>
             </div>
             <div class="content__split">
-                <div class="content__split__img">
-                    <img src="/img/langf.png" alt="Frontend Languages">
-                </div>
+                <img class="content__split__img" src="/img/langf.png" alt="Frontend Languages">
                 <div class="content__split__body">
                     <h1 class="content__title">Frontend Languages</h1>
                     <div class="content__body">
@@ -43,9 +39,7 @@
                 </div>
             </div>
             <div class="content__split">
-                <div class="content__split__img">
-                    <img src="/img/editors.png" alt="IDE & Editors">
-                </div>
+                <img class="content__split__img" src="/img/editors.png" alt="IDE & Editors">
                 <div class="content__split__body">
                     <h1 class="content__title">IDE & Editors</h1>
                     <div class="content__body">
@@ -61,9 +55,7 @@
                 </div>
             </div>
             <div class="content__split">
-                <div class="content__split__img">
-                    <img src="/img/framb.png" alt="Backend Frameworks & Tooling">
-                </div>
+                <img class="content__split__img" src="/img/framb.png" alt="Backend Frameworks & Tooling">
                 <div class="content__split__body">
                     <h1 class="content__title">Backend Frameworks & Tooling</h1>
                     <div class="content__body">
@@ -80,9 +72,7 @@
                 </div>
             </div>
             <div class="content__split">
-                <div class="content__split__img">
-                    <img src="/img/framf.png" alt="Frontend Frameworks & Tooling">
-                </div>
+                <img class="content__split__img" src="/img/framf.png" alt="Frontend Frameworks & Tooling">
                 <div class="content__split__body">
                     <h1 class="content__title">Frontend Frameworks & Tooling</h1>
                     <div class="content__body">

@@ -81,7 +81,7 @@ button.button {
   margin: 0 auto;
 
   // Use all available width but don't go larger than 900px
-  width: 100%;
+  width: calc(100% - 4rem);
   max-width: 900px;
 
   background: linear-gradient($background, $background);

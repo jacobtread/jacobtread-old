@@ -6,26 +6,26 @@ import GithubIcon from "assets/icons/tech/github.svg?component"
     <div>
         <Heading/>
         <main class="main">
-            <div class="content">
-                <div class="button-group heading-group">
-                    <a class="button button--first" href="#about">
-                        <LinkIcon class="button__icon"/>
-                        <span class="button__text">About</span>
-                    </a>
-                    <a class="button button--second" href="#contact">
-                        <LinkIcon class="button__icon"/>
-                        <span class="button__text">Contact</span>
-                    </a>
-                    <NuxtLink class="button button--second" to="projects">
-                        <LinkIcon class="button__icon"/>
-                        <span class="button__text">Projects</span>
-                    </NuxtLink>
-                    <a class="button button--third" href="#tech">
-                        <LinkIcon class="button__icon"/>
-                        <span class="button__text">Tech</span>
-                    </a>
-                </div>
-            </div>
+<!--            <div class="content">-->
+<!--                <div class="button-group heading-group">-->
+<!--                    <a class="button button&#45;&#45;first" href="#about">-->
+<!--                        <LinkIcon class="button__icon"/>-->
+<!--                        <span class="button__text">About</span>-->
+<!--                    </a>-->
+<!--                    <a class="button button&#45;&#45;second" href="#contact">-->
+<!--                        <LinkIcon class="button__icon"/>-->
+<!--                        <span class="button__text">Contact</span>-->
+<!--                    </a>-->
+<!--                    <NuxtLink class="button button&#45;&#45;second" to="projects">-->
+<!--                        <LinkIcon class="button__icon"/>-->
+<!--                        <span class="button__text">Projects</span>-->
+<!--                    </NuxtLink>-->
+<!--                    <a class="button button&#45;&#45;third" href="#tech">-->
+<!--                        <LinkIcon class="button__icon"/>-->
+<!--                        <span class="button__text">Tech</span>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
             <About/>
             <Contact/>
             <Tech/>
