@@ -55,45 +55,54 @@ import DiscordIcon from "assets/icons/socials/discord.svg?component"
 </template>
 <style scoped lang="scss">
 @import "assets/scss/colors";
+@import "assets/scss/mixins";
 
 
 .content {
-    background: linear-gradient($second-block-tint-top, $second-block-tint-bottom);
+  background: linear-gradient($second-block-tint-top, $second-block-tint-bottom);
 
 
-    &--background {
-        background: linear-gradient($second-gradient-top, $second-gradient-bottom);
-    }
+  &--background {
+    background: linear-gradient($second-gradient-top, $second-gradient-bottom);
+  }
 
-    &__title {
-        background: $second-block-title-bg;
-    }
-
-    &__body {
-
-    }
+  &__title {
+    background: $second-block-title-bg;
+  }
 }
 
 .button-group {
-    flex-flow: column;
+  flex-flow: column;
+
+  @include max-width(430px) {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }
 
 .button {
-    background: $second-button-background;
+  background: $second-button-background;
+  @include max-width(430px) {
+    justify-content: center;
+  }
 
-    &__icon {
-        width: 48px;
-    }
+  &__icon {
+    width: 48px;
+  }
 
-    &__content {
-        display: flex;
-        flex-flow: column;
-        gap: 0.5rem;
-    }
+  &__content {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
 
-    &__subtext {
-        color: $text;
+    @include max-width(430px) {
+      display: none;
     }
+  }
+
+  &__subtext {
+    color: $text;
+  }
 }
 
 </style>

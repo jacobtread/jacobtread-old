@@ -44,6 +44,11 @@ import LinkIcon from "assets/icons/link.svg?component"
       align-items: stretch;
     }
   }
+
+  @include max-width(430px) {
+    padding: 0 1rem;
+    width: calc(100% - 2rem);
+  }
 }
 
 .button {

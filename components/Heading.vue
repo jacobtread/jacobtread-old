@@ -23,55 +23,63 @@ const TYPER_VALUES: string[] = [
 
 /* Heading element */
 .heading {
-    margin: 0;
-    display: flex;
-    width: 100%; // Heading must span the entire available width
+  margin: 0;
+  display: flex;
+  width: 100%; // Heading must span the entire available width
 
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 
-    padding: 4rem 0;
+  padding: 4rem 0;
 
-    /* Background image of code with linear-gradient in-front of it*/
-    background: linear-gradient($heading-gradient-start, $heading-gradient-end) no-repeat center,
-    url("assets/img/background.png") no-repeat center;
-    background-size: cover;
+  /* Background image of code with linear-gradient in-front of it*/
+  background: linear-gradient($heading-gradient-start, $heading-gradient-end) no-repeat center,
+  url("assets/img/background.png") no-repeat center;
+  background-size: cover;
 
-    &__corner {
-        position: fixed;
-        left: 1rem;
-        top: 1rem;
+  &__corner {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+  }
+
+  &__content {
+    text-align: center;
+
+    &__img {
+      opacity: 0.7;
+      margin-bottom: 1rem;
+    }
+
+    &__title {
+      color: $heading-title;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      font-size: 4rem;
+
+      @include max-width(430px) {
         font-size: 3rem;
-        color: white;
+      }
+    }
+
+    &__text {
+      color: $heading-text;
+      font-size: 1.5rem;
+
+      @include max-width(430px) {
+        font-size: 1.2rem;
+      }
+
+      &__role {
+        color: $heading-role;
         font-weight: bold;
+      }
     }
-
-    &__content {
-        text-align: center;
-
-        &__img {
-            opacity: 0.7;
-            margin-bottom: 1rem;
-        }
-
-        &__title {
-            color: $heading-title;
-            margin-bottom: 1rem;
-            font-weight: 400;
-            font-size: 4rem;
-        }
-
-        &__text {
-            color: $heading-text;
-            font-size: 1.5rem;
-
-            &__role {
-                color: $heading-role;
-                font-weight: bold;
-            }
-        }
-    }
+  }
 }
 
 </style>

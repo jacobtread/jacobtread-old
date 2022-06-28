@@ -1,6 +1,7 @@
 @import "reset";
 @import "fonts";
 @import "colors";
+@import "mixins";
 
 
 ::-webkit-scrollbar {
@@ -54,6 +55,10 @@ button.button {
   padding: 0.75rem 1rem 0.75rem 0.75rem;
   font-size: 1rem;
 
+  @include max-width(430px) {
+    font-size: 0.8rem;
+  }
+
   &__icon {
     width: 32px;
     height: auto;
@@ -64,6 +69,10 @@ button.button {
     color: white;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    @include max-width(430px) {
+      font-size: 1rem;
+    }
+
   }
 
 }
@@ -86,8 +95,19 @@ button.button {
   background: linear-gradient($background, $background);
   padding: 2rem;
 
+  @include max-width(430px) {
+    padding: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+
   &--background {
     padding: 2rem;
+
+    @include max-width(430px) {
+      padding: 1rem;
+    }
+
     background: linear-gradient($background, $background);
   }
 
@@ -99,6 +119,11 @@ button.button {
     font-weight: bold;
     color: $title;
     border-radius: 8px;
+
+    @include max-width(430px) {
+      font-size: 1.2rem;
+    }
+
   }
 
   &__body {
@@ -112,12 +137,21 @@ button.button {
         color: $title;
         font-size: 1.5rem;
         margin-bottom: 1rem;
+
+        @include max-width(430px) {
+          font-size: 1.2rem;
+        }
+
       }
 
       &__text {
         color: $text;
         line-height: 1.5;
         font-size: 1.2rem;
+
+        @include max-width(430px) {
+          font-size: 1rem;
+        }
       }
 
     }
