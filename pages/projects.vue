@@ -23,3 +23,8 @@ import ProjectsList from "~/components/ProjectsList.vue"
         </main>
     </div>
 </template>
+<style lang="scss" scoped>
+.button-group {
+  flex-wrap: wrap;
+}
+</style>
