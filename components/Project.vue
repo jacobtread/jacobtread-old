@@ -13,7 +13,7 @@ interface Properties {
     links: Link[] | undefined
 }
 
-const { icon, name, tags, links } = defineProps<Properties>()
+const {icon, name, tags, links} = defineProps<Properties>()
 
 </script>
 <template>
@@ -42,34 +42,35 @@ const { icon, name, tags, links } = defineProps<Properties>()
 @import "assets/scss/colors";
 
 .content__body__item__title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .button-group {
-    margin: 1rem 0;
+  margin: 1rem 0;
+  flex-flow: row wrap;
 }
 
 .icon {
-    height: 32px;
-    max-height: 32px;
-    display: inline;
+  height: 32px;
+  max-height: 32px;
+  display: inline;
 }
 
 .tags {
-    display: flex;
-    flex-flow: row;
-    gap: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
 
-    &__value {
-        padding: 0.5rem;
-        background: $first-button-background;
-        border-radius: 8px;
-        color: $text;
-        opacity: 0.5;
+  &__value {
+    padding: 0.5rem;
+    background: $first-button-background;
+    border-radius: 8px;
+    color: $text;
+    opacity: 0.5;
 
-    }
+  }
 }
 
 </style>
