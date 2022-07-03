@@ -4,22 +4,22 @@ import LinkIcon from "assets/icons/link.svg?component"
 <template>
     <div class="heading-group__wrapper">
         <div class="heading-group">
-            <a class="button button--first" href="#about">
+            <NuxtLink class="button button--first" to="#about">
                 <LinkIcon class="button__icon"/>
                 <span class="button__text">About</span>
-            </a>
-            <a class="button button--second" href="#contact">
+            </NuxtLink>
+            <NuxtLink class="button button--second" to="#contact">
                 <LinkIcon class="button__icon"/>
                 <span class="button__text">Contact</span>
-            </a>
+            </NuxtLink>
             <NuxtLink class="button button--second" to="projects">
                 <LinkIcon class="button__icon"/>
                 <span class="button__text">Projects</span>
             </NuxtLink>
-            <a class="button button--third" href="#tech">
+            <NuxtLink class="button button--third" to="#tech">
                 <LinkIcon class="button__icon"/>
                 <span class="button__text">Tech</span>
-            </a>
+            </NuxtLink>
         </div>
     </div>
 </template>

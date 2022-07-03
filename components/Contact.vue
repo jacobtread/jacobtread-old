@@ -8,7 +8,7 @@ import DiscordIcon from "assets/icons/socials/discord.svg?component"
 <template>
     <div class="content--background">
         <div class="content" id="contact">
-            <a class="content__title" href="#contact">Contacting me</a>
+            <NuxtLink class="content__title" to="#contact">Contacting me</NuxtLink>
             <div class="content__body">
                 <div class="content__body__item">
                     <p class="content__body__item__text">
@@ -21,27 +21,27 @@ import DiscordIcon from "assets/icons/socials/discord.svg?component"
 
             </div>
             <div class="button-group">
-                <a class="button" href="https://instagram.com/jacobtread" rel="noopener" target="_blank">
+                <NuxtLink class="button" to="https://instagram.com/jacobtread" target="_blank">
                     <InstagramIcon class="button__icon"/>
                     <span class="button__content">
                         <span class="button__text">Instagram</span>
                         <span class="button__subtext">instagram.com/jacobtread</span>
                     </span>
-                </a>
-                <a class="button" href="https://github.com/jacobtread" rel="noopener" target="_blank">
+                </NuxtLink>
+                <NuxtLink class="button" to="https://github.com/jacobtread" target="_blank">
                     <GithubIcon class="button__icon"/>
                     <span class="button__content">
                         <span class="button__text">Github</span>
                         <span class="button__subtext">github.com/jacobtread</span>
                     </span>
-                </a>
-                <a class="button" href="mailto:jacobtread@gmail.com" rel="noopener" target="_blank">
+                </NuxtLink>
+                <NuxtLink class="button" to="mailto:jacobtread@gmail.com" target="_blank">
                     <EmailIcon class="button__icon"/>
                     <span class="button__content">
                         <span class="button__text">Email</span>
                         <span class="button__subtext">jacobtread@gmail.com</span>
                     </span>
-                </a>
+                </NuxtLink>
                 <div class="button">
                     <DiscordIcon class="button__icon"/>
                     <span class="button__content">

@@ -13,10 +13,10 @@ import ProjectsList from "~/components/ProjectsList.vue"
                         <LinkIcon class="button__icon"/>
                         <span class="button__text">Back</span>
                     </NuxtLink>
-                    <a class="button" href="https://github.com/jacobtread" rel="noopener" target="_blank">
+                    <NuxtLink class="button" to="https://github.com/jacobtread" target="_blank">
                         <GithubIcon class="button__icon"/>
                         <span class="button__text">View Github</span>
-                    </a>
+                    </NuxtLink>
                 </div>
             </div>
             <ProjectsList/>

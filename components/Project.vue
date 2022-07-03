@@ -26,10 +26,10 @@ const {icon, name, tags, links} = defineProps<Properties>()
             <slot/>
         </p>
         <div class="button-group">
-            <a v-for="link in links" class="button" :href="link.link" rel="noopener" target="_blank">
+            <NuxtLink v-for="link in links" class="button" :to="link.link" target="_blank">
                 <component v-if="link.icon" :is="link.icon" class="button__icon"/>
                 <span class="button__text">{{ link.text }}</span>
-            </a>
+            </NuxtLink>
         </div>
         <div class="tags">
             <span class="tags__value" v-for="tag in tags">

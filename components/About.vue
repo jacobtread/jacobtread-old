@@ -7,7 +7,7 @@ import GithubIcon from "assets/icons/tech/github.svg?component"
 <template>
     <div class="content--background">
         <div class="content" id="about">
-            <a class="content__title" href="#about">Getting to know me</a>
+            <NuxtLink class="content__title" to="#about">Getting to know me</NuxtLink>
             <div class="content__body">
                 <div class="content__body__item">
                     <h2 class="content__body__item__title">
@@ -55,10 +55,10 @@ import GithubIcon from "assets/icons/tech/github.svg?component"
                     <LinkIcon class="button__icon"/>
                     <span class="button__text">View Projects</span>
                 </NuxtLink>
-                <a class="button" href="https://github.com/jacobtread" rel="noopener" target="_blank">
+                <NuxtLink class="button" to="https://github.com/jacobtread" target="_blank">
                     <GithubIcon class="button__icon"/>
                     <span class="button__text">View Github</span>
-                </a>
+                </NuxtLink>
             </div>
         </div>
     </div>
