@@ -3,14 +3,14 @@
 interface Link {
     link: string
     text: string
-    icon: any
+    icon?: any
 }
 
 interface Properties {
-    icon: any,
+    icon?: any,
     name: string,
-    tags: string[] | undefined,
-    links: Link[] | undefined
+    tags?: string[],
+    links?: Link[]
 }
 
 const {icon, name, tags, links} = defineProps<Properties>()

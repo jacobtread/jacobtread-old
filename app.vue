@@ -24,6 +24,7 @@ definePageMeta({
   top: 0;
   width: 100%;
   height: 100%;
+  overflow: auto;
 }
 
 .page-enter-active,
@@ -36,4 +37,9 @@ definePageMeta({
   transform: translateY(-5px);
 }
 
+@media (prefers-reduced-motion) {
+  .page {
+    transition: transform 0.5s ease, opacity 1s ease;
+  }
+}
 </style>
