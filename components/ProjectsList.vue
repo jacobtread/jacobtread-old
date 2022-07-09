@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import GithubIcon from "assets/icons/tech/github.svg?component"
-import QRLSIcon from "assets/icons/projects/qrl.svg?component"
-import NZGMIcon from "assets/icons/projects/nzgm.svg?component"
-import PondIcon from "assets/icons/projects/pond.svg?component"
-import KNIIcon from "assets/icons/projects/kni.svg?component"
-import QuizlerIcon from "assets/icons/projects/quizler.svg?component"
-import TrueRandomIcon from "assets/icons/projects/tr.svg?component"
+import GithubIcon from "./icons/GithubIcon.vue"
+import QRLSIcon from "./icons/QRLIcon.vue"
+import NZGMIcon from "./icons/NZGMIcon.vue"
+import PondIcon from "./icons/PondIcon.vue"
+import StudentIcon from "./icons/StudentIcon.vue"
+import QuizlerIcon from "./icons/QuizlerIcon.vue"
+import TrueRandomIcon from "./icons/TRIcon.vue"
 
 </script>
 <template>
@@ -46,7 +46,7 @@ import TrueRandomIcon from "assets/icons/projects/tr.svg?component"
                     lot upon the existing ducky code language providing variables and macros.
                 </Project>
                 <Project
-                        :icon="KNIIcon"
+                        :icon="StudentIcon"
                         name="KNI"
                         :tags="['Python', 'Java', 'PHP', 'Javascript', 'Kotlin', 'Rust', 'Typescript', '.NET']"
                         :links="[{link:'https://github.com/jacobtread/KNI', text: 'Github', icon: GithubIcon}]">
@@ -54,7 +54,7 @@ import TrueRandomIcon from "assets/icons/projects/tr.svg?component"
                     that all have the one purpose of fetching notices from the KAMAR portal application.
                 </Project>
                 <Project
-                        :icon="KNIIcon"
+                        :icon="StudentIcon"
                         name="KJP"
                         :tags="['Go', 'JSON']"
                         :links="[{link:'https://github.com/jacobtread/KJP', text: 'Github', icon: GithubIcon}]">
@@ -62,7 +62,7 @@ import TrueRandomIcon from "assets/icons/projects/tr.svg?component"
                     and use KAMAR portal APIs through the web with easy to use JSON REST API
                 </Project>
                 <Project
-                        :icon="KNIIcon"
+                        :icon="StudentIcon"
                         name="KPM"
                         :tags="['VueJS', 'SASS', 'Typescript']"
                         :links="[{link:'https://github.com/jacobtread/KPM', text: 'Github', icon: GithubIcon}]">
@@ -70,7 +70,7 @@ import TrueRandomIcon from "assets/icons/projects/tr.svg?component"
                     technologies it runs all in the browser using a SPA and accesses KAMAR through KJP
                 </Project>
                 <Project
-                        :icon="KNIIcon"
+                        :icon="StudentIcon"
                         name="KAMAR-Notices"
                         :tags="['PHP', 'HTML', 'CSS', 'Laravel']"
                         :links="[{link:'https://github.com/jacobtread/KAMAR-Notices', text: 'Github', icon: GithubIcon}]">
@@ -78,7 +78,7 @@ import TrueRandomIcon from "assets/icons/projects/tr.svg?component"
                     that will cache results from KAMAR. Retrieves notices from KAMAR API using a PHP backend.
                 </Project>
                 <Project
-                        :icon="KNIIcon"
+                        :icon="StudentIcon"
                         name="KAMAR2"
                         :tags="['Kotlin','Android','Jetpack Compose','XML','JSON']"
                         :links="[{link:'https://github.com/jacobtread/KAMAR2', text: 'Github', icon: GithubIcon}]">

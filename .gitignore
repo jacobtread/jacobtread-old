@@ -12,6 +12,6 @@ node_modules
 # Distribution directory. Don't version control the built app
 dist
 
-# Private directory contains screenshots unrelated to
-# the public repository so it should be excluded
+# Private directory contains unused assets and screenshots that
+# are no longer included in this website
 private

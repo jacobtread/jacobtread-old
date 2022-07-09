@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import InstagramIcon from "assets/icons/socials/instagram.svg?component"
-import GithubIcon from "assets/icons/tech/github.svg?component"
-import EmailIcon from "assets/icons/socials/mail.svg?component"
-import DiscordIcon from "assets/icons/socials/discord.svg?component"
+import InstagramIcon from "~/components/icons/InstagramIcon.vue"
+import GithubIcon from "~/components/icons/GithubIcon.vue"
+import EmailIcon from "~/components/icons/MailIcon.vue"
+import DiscordIcon from "~/components/icons/DiscordIcon.vue"
 
 </script>
 <template>

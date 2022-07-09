@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LinkIcon from "assets/icons/link.svg?component"
+import LinkIcon from "./icons/LinkIcon.vue"
 </script>
 <template>
     <div class="heading-group__wrapper">

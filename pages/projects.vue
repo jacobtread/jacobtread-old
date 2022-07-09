@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import LinkIcon from "assets/icons/link.svg?component"
-import GithubIcon from "assets/icons/tech/github.svg?component"
+import LinkIcon from "~/components/icons/LinkIcon.vue"
+import GithubIcon from "~/components/icons/GithubIcon.vue"
 import ProjectsList from "~/components/ProjectsList.vue"
 </script>
 <template>
