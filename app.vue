@@ -1,10 +1,5 @@
 <script setup>
-definePageMeta({
-    pageTransition: {
-        name: 'page',
-        mode: 'default'
-    }
-})
+
 </script>
 <template>
     <div class="app-wrapper">

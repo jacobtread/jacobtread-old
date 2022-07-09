@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import GithubIcon from "assets/icons/tech/github.svg?component"
 import QRLSIcon from "assets/icons/projects/qrl.svg?component"
 import NZGMIcon from "assets/icons/projects/nzgm.svg?component"
@@ -211,16 +210,38 @@ import TrueRandomIcon from "assets/icons/projects/tr.svg?component"
 </template>
 <style scoped lang="scss">
 @import "assets/scss/colors";
+@import "assets/scss/mixins";
 
 
 .content {
+
+  // To display the two rows properly on larger screens the
+  // max width of this element is increased to 1200px from 900px
+  max-width: 1200px;
+
+  // Due to the large size of this single content block used for displaying
+  // projects rather than having individual split sections with their own
+  // gradients this uses a combination gradient of all the other gradients
   background: linear-gradient(
                   $first-block-tint-top, $first-block-tint-bottom,
                   $second-block-tint-top, $second-block-tint-bottom,
                   $third-block-tint-top, $third-block-tint-bottom,
   );
 
+  // Logic for when the page becomes <= to 1200px
+  @include max-width(1200px) {
+    // Use the original max-width of 900px
+    max-width: 900px;
+
+    .content__body {
+      // Reduce the number of columns to a single column this is
+      // to better represent the list on smaller screens
+      grid-template-columns: 1fr;
+    }
+  }
+
   &--background {
+    // The previously mentioned gradient is also applied here
     background: linear-gradient(
                     $first-gradient-top, $first-gradient-bottom,
                     $second-gradient-top, $second-gradient-bottom,
@@ -234,6 +255,8 @@ import TrueRandomIcon from "assets/icons/projects/tr.svg?component"
 
   &__body {
     gap: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     &__item__title__prefix {
       color: $first-block-subtitle-hash;

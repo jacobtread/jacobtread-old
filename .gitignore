@@ -5,6 +5,13 @@ node_modules
 .cache
 .output
 .env
+
+# Ignore the intellij specific settings
 .idea/
 
+# Distribution directory. Don't version control the built app
 dist
+
+# Private directory contains screenshots unrelated to
+# the public repository so it should be excluded
+private
