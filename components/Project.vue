@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-interface Link {
+export interface Link {
     link: string
     text: string
     icon?: any
