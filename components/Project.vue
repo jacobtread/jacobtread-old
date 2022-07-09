@@ -3,6 +3,7 @@
 export interface Link {
     link: string
     text: string
+    // Optional icon component
     icon?: any
 }
 
